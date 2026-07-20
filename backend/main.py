@@ -6,6 +6,7 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import io
 
 app = FastAPI(title="House Price Prediction API")
 
@@ -18,13 +19,24 @@ app.add_middleware(
 )
 
 CURRENT_DIR = os.path.dirname(__file__) if "__file__" in locals() else "."
-MODEL_PATH = os.path.join(CURRENT_DIR, "house_price.pkl")
 LOCATIONS_PATH = os.path.join(CURRENT_DIR, "locations.json")
 
-model = joblib.load(MODEL_PATH)
+# Combine the three parts programmatically and read them
+model_parts = [
+    os.path.join(CURRENT_DIR, "house_price_part1.pkl"),
+    os.path.join(CURRENT_DIR, "house_price_part2.pkl"),
+    os.path.join(CURRENT_DIR, "house_price_part3.pkl")
+]
+model_bytearray = bytearray()
+for part in model_parts:
+    with open(part, 'rb') as f:
+        model_bytearray.extend(f.read())
+
+# Load the model directly using joblib
+model = joblib.load(io.BytesIO(model_bytearray))
 
 try:
-    with open(LOCATIONS_PATH, " Rogers" if False else "r") as f:
+    with open(LOCATIONS_PATH, "r") as f:
         allowed_locations = json.load(f)
 except Exception:
     allowed_locations = []
