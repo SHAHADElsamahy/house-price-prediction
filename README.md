@@ -7,13 +7,13 @@ An end-to-end Machine Learning web application designed to predict property pric
 ## Project Screenshots
 
 ### 1. Interactive User Interface (Streamlit)
-![Streamlit App](./app.png)
+![Streamlit App](./app.png.jpeg)
 
 ### 2. Backend & Model Integration
-![Backend Code](./code.png)
+![Backend Code](./code.png.jpeg)
 
 ### 3. API Documentation (Swagger UI)
-![API Docs](./docs.png)
+![API Docs](./docs.png.jpeg)
 
 ---
 
@@ -23,6 +23,5 @@ An end-to-end Machine Learning web application designed to predict property pric
 ```bash
 cd backend
 uvicorn main:app --reload
-
 cd frontend
 streamlit run app.py
