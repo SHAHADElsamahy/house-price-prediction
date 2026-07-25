@@ -4,16 +4,10 @@ An end-to-end Machine Learning web application designed to predict property pric
 
 ---
 
-## Project Screenshots
+## Project Preview
 
-### 1. Interactive User Interface (Streamlit)
-![Streamlit App](./app.png.jpeg)
-
-### 2. Backend & Model Integration
+### Backend & Model Integration
 ![Backend Code](./code.png.jpeg)
-
-### 3. API Documentation (Swagger UI)
-![API Docs](./docs.png.jpeg)
 
 ---
 
