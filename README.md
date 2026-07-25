@@ -12,7 +12,6 @@ An end-to-end Machine Learning web application designed to predict residential p
 
 ### Web Application Interface
 ![Streamlit App Interface](./app1.png.jpeg)
-
 ---
 
 ## 🚀 How to Run Locally
