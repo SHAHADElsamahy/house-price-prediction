@@ -11,8 +11,7 @@ An end-to-end Machine Learning web application designed to predict residential p
 ## 📸 Project Live Preview
 
 ### Web Application Interface
-![Streamlit App Interface](https://raw.githubusercontent.com/SHAHADElsamahy/house-price-prediction/main/app1.png.jpeg)
-
+![Streamlit App Interface](./app.png)
 
 ---
 
